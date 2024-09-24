@@ -17,7 +17,7 @@ const customStyles = {
   option: (provided, state) => ({
     ...provided,
     color: state.isSelected ? "white" : "black",
-    backgroundColor: state.isFocused ? "lightgray" : "white",
+    backgroundColor: state.isSelected ? "blue" : state.isFocused ? "lightgray" : "white",
     display: "flex",
     alignItems: "center",
   }),
