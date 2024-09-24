@@ -37,7 +37,7 @@ export default function Home() {
         <div className="row">
           {tasks.length > 0 ? (
             tasks.map((task) => (
-              <div key={task.id} className="col-md-4 col-sm-6 col-lg-3 mt-2">
+              <div key={task.id} className="col-md-6 mt-2">
                 <div className="card">
                   <div className="card-header d-flex justify-content-between align-items-center">
                     <div className="d-flex align-items-center">
