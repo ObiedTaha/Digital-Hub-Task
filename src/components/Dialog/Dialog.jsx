@@ -137,26 +137,11 @@ export default function Dialog({ data, mode }) {
                   ></textarea>
                 </div>
                 <div className="mt-3">
-                  <Controller
-                    name="status"
-                    control={control}
-                    render={({ field }) => (
-                      <Select
-                        {...field}
-                        options={statusOptions}
-                        formatOptionLabel={formatOptionLabel}
-                        placeholder="Status..."
-                        styles={customStyles}
-                      />
-                    )}
-                  />
+                  <Controller name="status" control={control} render={({ field }) => (
+                    <Select {...field} options={statusOptions} formatOptionLabel={formatOptionLabel} placeholder="Status..." styles={customStyles} />)} />
                 </div>
                 <div className="modal-footer">
-                  <button
-                    type="button"
-                    className="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
+                  <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                     Close
                   </button>
                   <button type="submit" className="btn btn-primary">

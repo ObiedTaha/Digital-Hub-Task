@@ -42,34 +42,19 @@ export default function Home() {
                   <div className="card-header d-flex justify-content-between align-items-center">
                     <div className="d-flex align-items-center">
                       <span className="px-2 h6">{task.taskName}</span>
-                      <span
-                        className="py-2 h6"
-                        style={{
-                          display: "inline-block",
-                          width: "20px",
-                          height: "20px",
-                          borderRadius: "50%",
-                          backgroundColor: getStatusColor(task.status?.value),
-                          marginRight: "10px",
-                        }}
-                      />
-                      {task.status?.value ? (
-                        <span className="py-2 h6">({task.status?.value})</span>
-                      ) : (
-                        <span className="py-2 h6">(Select Status)</span>
-                      )}
+                      <span className="py-2 h6" style={{
+                        display: "inline-block", width: "20px", height: "20px",
+                        borderRadius: "50%", backgroundColor: getStatusColor(task.status?.value), marginRight: "10px",
+                      }} />
+                      {task.status?.value ? (<span className="py-2 h6">({task.status?.value})</span>) :
+                        (<span className="py-2 h6">(Select Status)</span>)}
                     </div>
                     <div>
-                      <button
-                        className="btn p-0 m-1 border-0"
-                        onClick={() => handleEdit(task)}
-                      >
+                      <button className="btn p-0 m-1 border-0" onClick={() => handleEdit(task)} >
                         <i className="fa-regular fa-pen-to-square text-warning"></i>
                       </button>
-                      <button
-                        className="btn p-0 m-1 border-0"
-                        onClick={() => handleDelete(task.id)} // Use the task's unique ID for deletion
-                      >
+                      {/* Use the task's unique ID for deletion */}
+                      <button className="btn p-0 m-1 border-0" onClick={() => handleDelete(task.id)} >
                         <i className="fa-regular fa-trash-can text-danger"></i>
                       </button>
                     </div>
